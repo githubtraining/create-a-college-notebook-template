@@ -4,7 +4,7 @@ const core = require("@actions/core");
 async function run() {
   try {
     const mytoken = core.getInput("repo-token");
-    const octokit = github.GitHub(mytoken);
+    const octokit = new github.GitHub(mytoken);
     const context = github.context;
 
     const newIssue = await octokit.issues.create({
