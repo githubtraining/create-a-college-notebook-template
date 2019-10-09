@@ -14,7 +14,7 @@ async function run() {
       body: "# My Course Notes"
     });
   } catch (error) {
-    core.debug(error.message);
+    core.setFailed(error.message);
   }
 }
 
