@@ -1,0 +1,11 @@
+name: create issues
+description: I create issues when you tell me to
+
+inputs:
+  repo-token:
+    description: Access token to use the api, use GITHUB_TOKEN silly, it's better
+    required: true
+
+runs:
+  using: "node12"
+  main: main.js
