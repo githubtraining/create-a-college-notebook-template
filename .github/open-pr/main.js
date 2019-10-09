@@ -26,6 +26,7 @@ async function run() {
       repo: context.repo.repo,
       path: "notes/" + date + ".md",
       message: "file for " + date + " created",
+      branch: newBranch.data.ref,
       content: Buffer.from("# My Course Notes").toString("base64")
     });
 
