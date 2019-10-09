@@ -34,8 +34,8 @@ async function run() {
       repo: context.repo.repo,
       title: "Comp-Sci 101 " + date,
       body: "Merge me to save your notes",
-      base: "some base",
-      head: "some head"
+      base: "master",
+      head: newBranch.data.ref
     });
   } catch (error) {
     console.error(error);
