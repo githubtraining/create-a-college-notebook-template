@@ -38,6 +38,7 @@ async function run() {
       head: "some head"
     });
   } catch (error) {
+    console.error(error);
     core.setFailed(error.message);
   }
 }
