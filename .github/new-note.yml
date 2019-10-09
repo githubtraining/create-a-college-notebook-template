@@ -1,0 +1,15 @@
+name: Create a new note file at the start of class
+
+on:
+  schedule:
+    # "At 09:00 on Monday."
+    - cron: '0 9 * * 1'
+
+jobs:
+  new-note:
+    runs-on: ubuntu-latest
+    steps:
+      # Tell Actions to clone the repository
+      - uses: actions/checkout@v1
+      # Call our custom action
+      - uses: ./.github/open-pr
